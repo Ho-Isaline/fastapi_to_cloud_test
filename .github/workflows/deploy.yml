@@ -15,7 +15,7 @@ jobs:
         uses: docker/login-action@v2
         with:
           registry: registry.digitalocean.com
-          username: ${{ secrets.DO_PAT }}
+          username: ${{ secrets.USERNAME }}
           password: ${{ secrets.DO_PAT }}
 
 
