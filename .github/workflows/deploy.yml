@@ -35,5 +35,5 @@ jobs:
           script: |
             docker pull registry.digitalocean.com/test-registry-fastapi/test-fastapi:latest
             docker stop my-api || true
-            docker rm my-api || true
+            docker rm -f my-api || true
             docker run -d --name my-api -p 80:8080 registry.digitalocean.com/test-registry-fastapi/test-fastapi:latest
