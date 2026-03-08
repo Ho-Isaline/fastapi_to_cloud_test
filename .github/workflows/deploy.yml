@@ -33,6 +33,7 @@ jobs:
           username: root
           key: ${{ secrets.SSH_KEY }}
           script: |
+            echo "${{ secrets.DO_PAT }}" | docker login registry.digitalocean.com -u "${{ secrets.USERNAME }}" --password-stdin
             docker pull registry.digitalocean.com/test-registry-fastapi/test-fastapi:latest
             docker stop my-api || true
             docker rm -f my-api || true
