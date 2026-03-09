@@ -5,7 +5,7 @@ app = FastAPI()
 
 @app.get("/")
 def read_root():
-    return {"message": "Hello World! 我的雲端 API 運作中！"}
+    return {"message": "Hello World! This is a test for cloud API!"}
 
 # 這裡讓應用程式自動抓取雲端給的 Port
 if __name__ == "__main__":
